@@ -1,0 +1,58 @@
+:root {
+  --spacing-sm: 16px;
+  --spacing-md: 34px;
+  --spacing-lg: 50px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* background-image: url(./images/Hammer_and_Sickle_\(CPSU\).svg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+
+
+.column-one {
+  /* background-image: url(./images/Hammer_and_Sickle_\(CPSU\).svg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+  /* background-image: url(./images/cones.svg);
+    background-repeat: repeat;
+    background-size: contain; */
+  width: 40%;
+  height: 100%;
+  background-color: rgb(36, 33, 33);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.column-one .heading {
+  align-self: flex-start;
+  margin: 15px 15px;
+}
+
+.column-one .heading h1 {
+  color: white;
+  font-size: 7rem;
+  font-weight: bold;
+  letter-spacing: 10px;
+  font-family: "Teko", sans-serif;
+  margin: 0;
+}
+
+.column-one img {
+  width: 100%;
+}
+
+.column-two {
+  /* background-color: white; */
+  width: 60%;
+  height: auto;
+}
