@@ -3,7 +3,7 @@
   --accent-yellow: #ffd50fff;
   --black-bg: rgb(36, 33, 33);
   --font-heading: "Teko", sans-serif;
-  --font-body: 'Comfortaa', sans-serif;
+  --font-body: "Comfortaa", sans-serif;
   --spacing-sm: 16px;
   --spacing-md: 34px;
   --spacing-lg: 50px;
@@ -52,19 +52,20 @@
 
 .column-two {
   width: 60%;
-  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   padding-left: var(--spacing-md);
 }
 
-.heading,.form-container,.column-two-footer {
-  margin-bottom: calc(var(--spacing-lg)*2.2);
+.heading,
+.form-container {
+  margin-bottom: calc(var(--spacing-lg) * 2);
 }
 
-.column-two .heading {
+.column-two .column-two-footer,
+.heading {
   align-self: flex-start;
 }
 
@@ -72,50 +73,61 @@
   font-size: 5rem;
   font-family: var(--font-body);
   font-weight: bold;
+  margin: 0;
 }
 
-.column-two .column-two-footer {
-  align-self: flex-start;
+.column-two > .heading > p {
+  font-size: 2rem;
+  text-align: center;
+  font-family: var(--font-body);
 }
 
-/*SECOND COLUMN FORM*/ 
-
+/*SECOND COLUMN FORM*/
 .form-container {
   width: 100%;
 }
 
-.form-group1,.form-group2,.form-group3 {
+.form-group1,
+.form-group2,
+.form-group3 {
   display: flex;
   justify-content: space-around;
-  margin-bottom: calc(var(--spacing-lg) *2);
 }
 
-input,label {
+.form-group1,
+.form-group2 {
+  margin-bottom: calc(var(--spacing-lg) * 2.5);
+}
+
+label {
   width: 65%;
-  border: none;
 }
 
 input {
-  padding: var(--spacing-sm);
+  width: 70%;
+  border: none;
+  padding: calc(var(--spacing-md) / 1.3);
   border-radius: 12px;
+  font-size: 1.4rem;
   border-left: 1px solid var(--soviet-red);
   border-bottom: 1px solid var(--soviet-red);
-  position: relative;
 }
 
 ::placeholder {
   text-transform: uppercase;
+  opacity: 1;
+  font-weight: bold;
 }
 
-/*FOOTER COLUMN TWO */ 
+/*FOOTER COLUMN TWO */
 .column-two-footer {
-  width: 30%;
+  width: 35%;
   font-family: var(--font-body);
 }
 
 .column-two-footer .submit {
   padding: var(--spacing-sm);
-  width: 100%;
+  width: 85%;
   font-size: 1.7rem;
   letter-spacing: 2.2px;
   border-radius: 12px;
@@ -132,7 +144,8 @@ input {
   background-color: var(--soviet-red);
 }
 
-.login-text, a{
+.login-text,
+a {
   font-size: 1.1rem;
   margin-top: var(--spacing-md);
   letter-spacing: 1.5px;
@@ -143,32 +156,8 @@ input {
   text-decoration: none;
   color: black;
   font-weight: bold;
+  text-align: left;
 }
 .login-text a:hover {
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-/* .form-container span {
-  position: absolute;
-  z-index: 1;
-  font-size: 1.5rem;
-  opacity: 0.5;
-  text-transform: uppercase;
-  transform: translate(10%,50%);
-}
-span:focus {
-  transform: translate(10%,-50%);
-} */
-
-
-
