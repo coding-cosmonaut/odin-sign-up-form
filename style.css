@@ -1,4 +1,7 @@
 :root {
+  --soviet-red: #af002a;
+  --accent-yellow: #ffd50fff;
+  --black-bg: rgb(36, 33, 33);
   --spacing-sm: 16px;
   --spacing-md: 34px;
   --spacing-lg: 50px;
@@ -8,25 +11,12 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  /* background-image: url(./images/Hammer_and_Sickle_\(CPSU\).svg.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
 
-
-
 .column-one {
-  /* background-image: url(./images/Hammer_and_Sickle_\(CPSU\).svg.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
-  /* background-image: url(./images/cones.svg);
-    background-repeat: repeat;
-    background-size: contain; */
   width: 40%;
   height: 100%;
-  background-color: rgb(36, 33, 33);
+  background-color: var(--black-bg);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,31 +39,14 @@
   margin: 0;
 }
 
-.column-one .stars {
-    position: absolute;
-    right: 0;
-    z-index: 10;
-}
-
-.column-one .stars:nth-of-type(1) {
-    right: 40%;
-    height: 250px;
-}
-
-.column-one .constellations-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -50px;
-    z-index: -10;
-}
-
-.column-one #soviet {
+.column-one #column-one-bg {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
 }
 
 .column-two {
-  /* background-color: white; */
   width: 60%;
   height: auto;
 }
