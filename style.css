@@ -2,6 +2,8 @@
   --soviet-red: #af002a;
   --accent-yellow: #ffd50fff;
   --black-bg: rgb(36, 33, 33);
+  --font-heading: "Teko", sans-serif;
+  --font-body: 'Comfortaa', sans-serif;
   --spacing-sm: 16px;
   --spacing-md: 34px;
   --spacing-lg: 50px;
@@ -35,7 +37,7 @@
   font-size: 7rem;
   font-weight: bold;
   letter-spacing: 10px;
-  font-family: "Teko", sans-serif;
+  font-family: var(--font-heading);
   margin: 0;
 }
 
@@ -46,7 +48,127 @@
   object-fit: cover;
 }
 
+/*SECOND COLUMN*/
+
 .column-two {
   width: 60%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: var(--spacing-md);
 }
+
+.heading,.form-container,.column-two-footer {
+  margin-bottom: calc(var(--spacing-lg)*2.2);
+}
+
+.column-two .heading {
+  align-self: flex-start;
+}
+
+.column-two h2 {
+  font-size: 5rem;
+  font-family: var(--font-body);
+  font-weight: bold;
+}
+
+.column-two .column-two-footer {
+  align-self: flex-start;
+}
+
+/*SECOND COLUMN FORM*/ 
+
+.form-container {
+  width: 100%;
+}
+
+.form-group1,.form-group2,.form-group3 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: calc(var(--spacing-lg) *2);
+}
+
+input,label {
+  width: 65%;
+  border: none;
+}
+
+input {
+  padding: var(--spacing-sm);
+  border-radius: 12px;
+  border-left: 1px solid var(--soviet-red);
+  border-bottom: 1px solid var(--soviet-red);
+  position: relative;
+}
+
+::placeholder {
+  text-transform: uppercase;
+}
+
+/*FOOTER COLUMN TWO */ 
+.column-two-footer {
+  width: 30%;
+  font-family: var(--font-body);
+}
+
+.column-two-footer .submit {
+  padding: var(--spacing-sm);
+  width: 100%;
+  font-size: 1.7rem;
+  letter-spacing: 2.2px;
+  border-radius: 12px;
+  font-weight: 400;
+  color: white;
+  background-color: var(--soviet-red);
+  transition: 0.3s ease;
+}
+.submit:hover {
+  cursor: pointer;
+  background-color: #bf0431;
+}
+.submit:active {
+  background-color: var(--soviet-red);
+}
+
+.login-text, a{
+  font-size: 1.1rem;
+  margin-top: var(--spacing-md);
+  letter-spacing: 1.5px;
+}
+
+.login-text a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.login-text a:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .form-container span {
+  position: absolute;
+  z-index: 1;
+  font-size: 1.5rem;
+  opacity: 0.5;
+  text-transform: uppercase;
+  transform: translate(10%,50%);
+}
+span:focus {
+  transform: translate(10%,-50%);
+} */
+
+
+
