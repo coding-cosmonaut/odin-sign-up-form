@@ -12,7 +12,6 @@ inputs.forEach((item) => {
 
 inputs.forEach((item) => {
   item.addEventListener("blur", (event) => {
-    console.log(item.value, "in blur");
     if (!item.value) {
       item.nextElementSibling.textContent = compareNames(
         item.nextElementSibling.textContent
@@ -22,7 +21,6 @@ inputs.forEach((item) => {
 });
 
 function compareNames(value) {
-  console.log(value, "compareNames");
   switch (value) {
     case "первый имя":
       return "FIRST NAME";
