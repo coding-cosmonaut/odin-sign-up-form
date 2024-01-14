@@ -5,32 +5,21 @@ const secondPassword = document.querySelector("#confirm-password");
 const errorDiv = document.querySelector(".error");
 const submitBttn = document.querySelector(".submit");
 
-let validation = false;
-
-secondPassword.addEventListener("keyup", (event) => {
-  let targetVal = event.target.value;
-  let comparisonPass = mainPassword.value;
-  checkPasswords(targetVal, comparisonPass);
-});
-
-function checkPasswords(pass1, pass2) {
-  if (pass1 === pass2) {
-    errorDiv.classList.add("error-show");
-    validation = true;
-    return;
-  } else {
-    errorDiv.classList.remove("error-show");
-    validation = false;
+submitBttn.addEventListener(
+  "click",
+  (
+    event,
+    value = mainPassword.value,
+    comparisonValue = secondPassword.value
+  ) => {
+    if (value !== comparisonValue) {
+      event.preventDefault();
+      errorDiv.classList.remove("error-show");
+      secondPassword.classList.add("error-password");
+      mainPassword.classList.add("error-password");
+    }
   }
-}
-
-submitBttn.addEventListener("click", () => {
-  if (validation) {
-    window.location.reload();
-    return;
-  }
-  errorDiv.classList.remove("error-show");
-});
+);
 
 inputs.forEach((item) => {
   item.addEventListener("focus", () => {
